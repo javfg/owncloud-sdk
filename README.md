@@ -1,3 +1,6 @@
+[!] We switched to upstream SDK (until a need to fork arises), so the repo has been archived.
+
+
 [![docs](https://img.shields.io/badge/api_docs-online-blue.svg)](https://owncloud.github.io/owncloud-sdk/)
 
 # ownCloud JavaScript SDK
