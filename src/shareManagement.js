@@ -444,6 +444,15 @@ class Shares {
       if (optionalParams.attributes) {
         postData.attributes = optionalParams.attributes
       }
+      if (optionalParams.notifyUploads !== undefined) {
+        postData.notifyUploads = optionalParams.notifyUploads
+      }
+      if (optionalParams.notifyUploadsExtraRecipients !== undefined) {
+        postData.notifyUploadsExtraRecipients = optionalParams.notifyUploadsExtraRecipients
+      }
+      if (optionalParams.notifyAddresses !== undefined) {
+        postData.notifyAddresses = optionalParams.notifyAddresses
+      }
     }
 
     /* jshint unused: false */
@@ -598,6 +607,10 @@ class Shares {
 
     if (optionalParams.remoteUser) {
       data.shareType = this.helpers.OCS_SHARE_TYPE_REMOTE
+    }
+
+    if (optionalParams.notify) {
+      data.notify = optionalParams.notify
     }
 
     return data
