@@ -492,6 +492,24 @@ class Shares {
   }
 
   /**
+   * Send a share reminder notification
+   * @param   {number}   shareId   ID of the share to delete
+   * @returns {Promise.<status>}   boolean: true if successful
+   * @returns {Promise.<error>}    string: error message, if any.
+   */
+  notifyShare (shareId) {
+    return new Promise((resolve, reject) => {
+      this.helpers._makeOCSrequest('POST', this.helpers.OCS_SERVICE_SHARE,
+        'shares/' + encodeURIComponent(shareId.toString()) + '/notify'
+      ).then(() => {
+        resolve(true)
+      }).catch(error => {
+        reject(error)
+      })
+    })
+  }
+
+  /**
    * Get share Recipients
    * @param {string} search
    * @param {string} itemType
