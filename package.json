@@ -39,6 +39,9 @@
     "test-provider:oc10": "jest --runInBand providerTest.js -t 'oc10 as provider'",
     "test-provider:ocis": "jest --runInBand providerTest.js -t 'ocis as provider'"
   },
+  "exports": [
+    "./src/owncloud.js"
+  ],
   "babel": {
     "presets": [
       [
